@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HikeDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hike_details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeNameTitle"
+                    android:text="@string/hike_name"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeName"
+                    tools:text="Pyin Oo Lwin Hiking"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeLoactionTitle"
+                    android:text="@string/location"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeLocation"
+                    tools:text="Pyin Oo Lwin"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeDateTitle"
+                    android:text="@string/date_of_hike"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeDate"
+                    tools:text="October 25, 2023"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvParkingTitle"
+                    android:text="@string/parking_available"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvParking"
+                    tools:text="Yes"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeLengthTitle"
+                    android:text="@string/length_of_hike"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeLength"
+                    tools:text="12 Km"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeDifficultyTitle"
+                    android:text="@string/difficulty"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeDifficulty"
+                    tools:text="Strong"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeStartPointTitle"
+                    android:text="@string/start_point"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeStartPoint"
+                    tools:text="Strong"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeEndPointTitle"
+                    android:text="@string/end_point"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeEndPoint"
+                    tools:text="Strong"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHikeDescriptionTitle"
+                    android:text="@string/description"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey_color"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvHikeDescription"
+                    tools:text="Strong"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black_color"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                app:layout_constraintTop_toBottomOf="@id/llHike"
+                android:layout_marginTop="10dp"
+                android:background="#F7F7F7"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/tvObservationListTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/observation_list"
+                android:textSize="18sp"
+                android:textColor="@color/text_black_color"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recObservationList"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                tools:listitem="@layout/observation_detail_item_card"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:itemCount="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

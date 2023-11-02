@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvObservationCount"
+        android:layout_marginStart="16dp"
+        tools:text="Observation 1"
+        android:textSize="18sp"
+        android:textColor="@color/text_black_color"
+        android:fontFamily="@font/inter_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvAnimalsTitle"
+            android:text="@string/sightings_of_animals"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDetailsAnimals"
+            tools:text="sitting"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvVegatitionTitle"
+            android:text="@string/types_of_vegetation"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDetailsVegatition"
+            tools:text="green leaf"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvWeatherTitle"
+            android:text="@string/weather_conditions"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDetailsWeather"
+            tools:text="Clear"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTrailsTitle"
+            android:text="@string/conditions_of_trails"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDetailsTrails"
+            tools:text="Clear"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvObservationDateTitle"
+            android:text="@string/date"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDetailsObservationDate"
+            tools:text="Clear"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvObservationTimeTitle"
+            android:text="@string/time"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDetailsObservationTime"
+            tools:text="Clear"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvCommentTitle"
+            android:text="@string/additional_comments"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDetailsComment"
+            tools:text="Clear"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="@color/text_grey_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llHike"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                tools:text="Mountain"
+                android:textSize="16sp"
+                android:textColor="@color/text_black_color"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ivEditHike"
+                    android:paddingHorizontal="10dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name" />
+                <ImageView
+                    android:id="@+id/ivDeleteHike"
+                    android:paddingHorizontal="10dp"
+                    android:src="@drawable/ic_common_gray_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDate"
+            tools:text="October 17, 2023"
+            android:textSize="14sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvLocationHike"
+            tools:text="Myanmar"
+            android:textSize="14sp"
+            android:textColor="@color/text_black_color"
+            android:fontFamily="@font/inter_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvLengthHike"
+            tools:text="40 Km"
+            android:textSize="14sp"
+            android:textColor="@color/text_grey_color"
+            android:fontFamily="@font/inter_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbObservationList"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="6dp"
+                android:drawableLeft="@drawable/ic_list"
+                android:backgroundTint="@color/yellow"
+                android:text="@string/observation_list"
+                android:textSize="14sp"
+                app:cornerRadius="5dp"/>
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbAddObservation"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="6dp"
+                android:drawableLeft="@drawable/ic_add"
+                android:backgroundTint="@color/blue"
+                android:text="@string/add_observation"
+                android:textSize="14sp"
+                app:cornerRadius="5dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/llHike"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_grey_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

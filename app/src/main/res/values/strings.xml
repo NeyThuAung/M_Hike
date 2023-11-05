@@ -50,4 +50,5 @@
     <string name="home">Home</string>
     <string name="add">Add</string>
     <string name="weather">Weather</string>
+    <string name="filter_hike">Filter Hike</string>
 </resources>

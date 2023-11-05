@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     AddHikeFragment addHikeFragment;
     WeatherFragment weatherFragment;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

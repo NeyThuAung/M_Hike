@@ -19,13 +19,6 @@ public class FilterHikeActivity extends AppCompatActivity {
 
     private ActivityFilterHikeBinding binding;
 
-    DatabaseHelper databaseHelper;
-    AlertDialog.Builder builder;
-
-    ArrayList<Hike> hikeList = new ArrayList<>();
-    HikeAdapter hikeAdapter;
-    String searchText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +42,7 @@ public class FilterHikeActivity extends AppCompatActivity {
                     intent.putExtra("filter_hike_location", binding.etLocation.getText().toString());
                     intent.putExtra("filter_hike_date", binding.etDate.getText().toString());
                     startActivity(intent);
-                }else {
+                } else {
 
                     Toast.makeText(FilterHikeActivity.this, "One of filter field is required. \n Enter required filter field.", Toast.LENGTH_SHORT).show();
 

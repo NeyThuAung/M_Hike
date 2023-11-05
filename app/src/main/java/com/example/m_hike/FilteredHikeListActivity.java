@@ -22,13 +22,14 @@ public class FilteredHikeListActivity extends AppCompatActivity implements HikeA
 
     private ActivityFilteredHikeListBinding binding;
 
-    String name,location,date;
+    String name, location, date;
 
     DatabaseHelper databaseHelper;
     AlertDialog.Builder builder;
 
     ArrayList<Hike> hikeList = new ArrayList<>();
     HikeAdapter hikeAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,15 +44,15 @@ public class FilteredHikeListActivity extends AppCompatActivity implements HikeA
         });
 
         Intent intent = getIntent();
-        name = intent.getExtras().getString("filter_hike_name","");
-        location = intent.getExtras().getString("filter_hike_location","");
-        date = intent.getExtras().getString("filter_hike_date","");
+        name = intent.getExtras().getString("filter_hike_name", "");
+        location = intent.getExtras().getString("filter_hike_location", "");
+        date = intent.getExtras().getString("filter_hike_date", "");
 
-        Log.d("JHKHJKH", "onCreate: "+name+ " " + location+ "  "+ date);
+        Log.d("JHKHJKH", "onCreate: " + name + " " + location + "  " + date);
 
         databaseHelper = new DatabaseHelper(getApplicationContext());
         hikeList.clear();
-        hikeList = databaseHelper.getFilteredHikeWithKeywords(name,location,date);
+        hikeList = databaseHelper.getFilteredHikeWithKeywords(name, location, date);
 
         // Recycler
         if (hikeList.size() != 0) {
@@ -73,6 +74,7 @@ public class FilteredHikeListActivity extends AppCompatActivity implements HikeA
         hikeAdapter = new HikeAdapter(this, hikeList, this);
         binding.recHikeList.setAdapter(hikeAdapter);
     }
+
     @Override
     public void hikeItemClick(int hikeId) {
 
@@ -101,7 +103,7 @@ public class FilteredHikeListActivity extends AppCompatActivity implements HikeA
                 databaseHelper.deleteHikeDetails(hikeId);
                 Toast.makeText(getApplicationContext(), "Hike Id " + Integer.toString(hikeId) + " is successfully deleted.", Toast.LENGTH_SHORT).show();
                 hikeList.clear();
-                hikeList = databaseHelper.getFilteredHikeWithKeywords(name,location,date);
+                hikeList = databaseHelper.getFilteredHikeWithKeywords(name, location, date);
 
                 if (hikeList.size() != 0) {
                     binding.tvNoHIke.setVisibility(View.INVISIBLE);

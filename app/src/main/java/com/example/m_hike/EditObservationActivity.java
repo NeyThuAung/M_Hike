@@ -187,12 +187,12 @@ public class EditObservationActivity extends AppCompatActivity {
 
     private void setUpObservationData() {
 
-        if (observation.getImage() != null){
+        if (observation.getImage() != null) {
             bitmapImage = observation.getImage();
             binding.ivCamera.setVisibility(View.GONE);
             binding.ivSelectedImage.setVisibility(View.VISIBLE);
             binding.ivSelectedImage.setImageBitmap(observation.getImage());
-        }else {
+        } else {
             binding.ivCamera.setVisibility(View.VISIBLE);
             binding.ivSelectedImage.setVisibility(View.GONE);
         }

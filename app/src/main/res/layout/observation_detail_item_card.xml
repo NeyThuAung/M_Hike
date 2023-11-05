@@ -10,7 +10,7 @@
         android:id="@+id/tvObservationCount"
         android:layout_marginStart="16dp"
         tools:text="Observation 1"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textColor="@color/text_black_color"
         android:fontFamily="@font/inter_regular"
         android:layout_width="wrap_content"

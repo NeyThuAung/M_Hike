@@ -44,7 +44,11 @@ public class ObservationListAdapter extends RecyclerView.Adapter<ObservationList
         holder.tvDetailsTrails.setText(observation.getTrails());
         holder.tvDetailsObservationDate.setText(observation.getDate());
         holder.tvDetailsObservationTime.setText(observation.getTime());
-        holder.tvDetailsComments.setText(observation.getComments());
+
+        if (observation.getComments().isEmpty()){
+            holder.tvDetailsComments.setText("-");
+        }else
+            holder.tvDetailsComments.setText(observation.getComments());
 
 
     }

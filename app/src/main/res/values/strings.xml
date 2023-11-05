@@ -45,4 +45,6 @@
     <string name="no_observation_record_found">No observation record found!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_date">Enter Date</string>
+    <string name="filtered_hike_list">Filtered Hike List</string>
 </resources>

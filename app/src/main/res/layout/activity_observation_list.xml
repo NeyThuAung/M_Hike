@@ -73,7 +73,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="12dp"
         android:layout_marginEnd="16dp"
-        android:drawableLeft="@drawable/ic_delete"
+        app:icon="@drawable/ic_common_gray_delete"
         android:backgroundTint="@color/red"
         android:text="@string/delete_all_observation"
         android:textSize="14sp"

@@ -17,6 +17,7 @@ import com.example.m_hike.model.Observation;
 import java.io.ByteArrayOutputStream;
 import java.sql.Blob;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -206,6 +207,72 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 },
                 HIKE_NAME + " LIKE ? OR " + HIKE_LOCATION + " LIKE ? OR " + HIKE_LENGTH + " LIKE ? OR " + HIKE_DATE + " LIKE ?",
                 new String[]{"%" + searchText + "%", "%" + searchText + "%", "%" + searchText + "%", "%" + searchText + "%"},
+                null,
+                null,
+                null);
+        result.moveToFirst();
+
+        ArrayList<Hike> hike_array = new ArrayList<>();
+
+        for (int i = 0; i < result.getCount(); i++) {
+            int id = result.getInt(0);
+            String name = result.getString(1);
+            String location = result.getString(2);
+            String date = result.getString(3);
+            String parking = result.getString(4);
+            String length = result.getString(5);
+            String difficulty = result.getString(6);
+            String startPoint = result.getString(7);
+            String endPoint = result.getString(8);
+            String description = result.getString(9);
+
+            Hike hike = new Hike(id, name, location, date, parking, length, difficulty, startPoint, endPoint, description);
+            hike_array.add(hike);
+
+            result.moveToNext();
+
+        }
+        return hike_array;
+
+    }
+
+    public ArrayList<Hike> getFilteredHikeWithKeywords(String nameSearchText, String locationSearchText, String dateSearchText) {
+        database = getReadableDatabase();
+
+        String whereClause = "";
+        List<String> whereArgs = new ArrayList<>();
+
+        if (!nameSearchText.isEmpty()) {
+            whereClause += HIKE_NAME + " LIKE ?";
+            whereArgs.add("%" + nameSearchText + "%");
+        }
+
+        if (!locationSearchText.isEmpty()) {
+            if (!whereClause.isEmpty()) {
+                whereClause += " AND ";
+            }
+            whereClause += HIKE_LOCATION + " LIKE ?";
+            whereArgs.add("%" + locationSearchText + "%");
+        }
+
+        if (!dateSearchText.isEmpty()) {
+            if (!whereClause.isEmpty()) {
+                whereClause += " AND ";
+            }
+            whereClause += HIKE_DATE + " LIKE ?";
+            whereArgs.add("%" + dateSearchText + "%");
+        }
+
+
+        Cursor result = database.query(
+                TABLE_NAME,
+                new String[]{
+                        HIKE_ID, HIKE_NAME, HIKE_LOCATION, HIKE_DATE, HIKE_PARKING, HIKE_LENGTH,
+                        HIKE_DIFFICULTY, HIKE_START_POINT,
+                        HIKE_END_POINT, HIKE_DESCRIPTION
+                },
+                whereClause,
+                whereArgs.toArray(new String[0]),
                 null,
                 null,
                 null);

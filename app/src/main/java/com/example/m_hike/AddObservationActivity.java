@@ -71,7 +71,6 @@ public class AddObservationActivity extends AppCompatActivity {
                 weather = parent.getItemAtPosition(position).toString();
             }
         });
-
         // Current date and time in initial
         Date currentDate = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM d, yyyy");

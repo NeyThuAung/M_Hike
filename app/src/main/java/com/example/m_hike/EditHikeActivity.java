@@ -18,6 +18,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.m_hike.database.DatabaseHelper;
+import com.example.m_hike.databinding.ActivityEditHikeBinding;
 import com.example.m_hike.databinding.ActivityMainBinding;
 import com.example.m_hike.model.Hike;
 
@@ -25,7 +26,7 @@ import java.util.Calendar;
 
 public class EditHikeActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private ActivityEditHikeBinding binding;
     DatabaseHelper databaseHelper;
 
     String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
@@ -45,11 +46,8 @@ public class EditHikeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityEditHikeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        binding.tvHikingRecordTitle.setText(R.string.edit_hiking_details);
-        binding.mbShowHike.setVisibility(View.GONE);
 
         databaseHelper = new DatabaseHelper(this);
 
@@ -134,6 +132,13 @@ public class EditHikeActivity extends AppCompatActivity {
                     builder.show();
                 }
 
+            }
+        });
+
+        binding.ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

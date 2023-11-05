@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/hike_home"
         android:title="Home"
-        android:icon="@drawable/ic_home" />
+        android:icon="@drawable/ic_home"/>
     <item
-        android:id="@+id/navigation_weather"
-        android:title="Weather"
-        android:icon="@drawable/ic_weather" />
-    <item
-        android:id="@+id/navigation_add"
+        android:id="@+id/hike_add"
         android:title="Add"
-        android:icon="@drawable/ic_add" />
+        android:icon="@drawable/ic_add_circle"/>
+    <item
+        android:id="@+id/hike_weather"
+        android:title="Weather"
+        android:icon="@drawable/ic_weather"/>
 </menu>

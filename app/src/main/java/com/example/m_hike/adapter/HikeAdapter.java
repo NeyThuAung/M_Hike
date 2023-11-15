@@ -1,6 +1,7 @@
 package com.example.m_hike.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class HikeAdapter extends RecyclerView.Adapter<HikeAdapter.HikeHolder> {
         this.context = context;
         this.hikeList = hikeList;
         this.listener = listener;
+
     }
 
     @NonNull

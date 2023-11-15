@@ -133,7 +133,7 @@ public class ObservationListActivity extends AppCompatActivity implements Observ
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                databaseHelper.deleteObservationByObservationId(hikeId);
+                databaseHelper.deleteObservationByObservationId(observation_id);
                 Toast.makeText(getApplicationContext(), "Successfully deleted.", Toast.LENGTH_SHORT).show();
                 observationList.clear();
                 observationList = databaseHelper.getAllObservationByHikeID(hikeId);

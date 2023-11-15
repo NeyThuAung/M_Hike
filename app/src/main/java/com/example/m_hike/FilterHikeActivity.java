@@ -50,22 +50,4 @@ public class FilterHikeActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void checkValidation() {
-
-        if (binding.etHikeName.getText().toString().length() == 0) {
-            binding.tilHikeName.setErrorEnabled(true);
-            binding.tilHikeName.setError("Name of hike is required.");
-        } else {
-            binding.tilHikeName.setErrorEnabled(false);
-        }
-
-        if (binding.etLocation.getText().toString().length() == 0) {
-            binding.tilLocation.setErrorEnabled(true);
-            binding.tilLocation.setError("Location is required.");
-        } else {
-            binding.tilLocation.setErrorEnabled(false);
-        }
-
-    }
 }
